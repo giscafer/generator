@@ -1,6 +1,9 @@
 # generator
 auto coding 
 
+## Feature
+
+- Java Pojo类生成前端TypeScript Vo类
 
 ## Usage
 
