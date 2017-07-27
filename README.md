@@ -15,7 +15,7 @@ eg:
 
 执行`javac -encoding UTF-8 Test.java` 生成的 `Test.class` 文件放到`./java-class`目录下
 
-- 编辑file.json文件，`fileNames`属性数组（数组的意思就是支持批量生成多个文件）
+- 编辑`./java-class/file.json`文件，json的`fileNames`属性数组（数组的意思就是支持批量生成多个文件）
 
 ```json
 {
