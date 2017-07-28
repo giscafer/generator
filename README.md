@@ -24,7 +24,7 @@ _文件目录可多级，无需关系Java类中的package包名，以及类中im
 
 eg:
 
-**Test.ts**
+**VResult.ts**
 
 ```
 export class VResult { 
