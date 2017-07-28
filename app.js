@@ -31,7 +31,7 @@ function g() {
             inst = java.newInstanceSync(f);
         } catch (e) {
             console.log(f + '报错')
-            // console.log(e);
+            console.log(e);
         }
         if (inst) {
             instances.push(inst);

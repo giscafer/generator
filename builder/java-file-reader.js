@@ -67,7 +67,7 @@ function replaceObject(str) {
         let objClassName = objClass.substr(0, objClass.indexOf(';'));
         // console.log(objClassName + '\n');
         let str2 = str.substr(semicolon + 1);
-        if (objClassName.length > 4) {
+        if (objClassName.length > 2) {
             str2 = str2.replace(new RegExp(objClassName, 'g'), 'Object');
         }
         return replaceObject(str2)
