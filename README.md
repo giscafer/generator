@@ -15,6 +15,7 @@ auto coding
 
 - （2）将Java POJO类文件放到`./java-class`文件夹中
 
+_文件目录可多级，无需关系Java类中的package包名，以及类中import了外部类或外部jar包，工程会自动去掉保证编译成功。_
 
 - （3）执行`npm run app`
 
