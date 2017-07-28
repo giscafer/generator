@@ -5,30 +5,20 @@ auto coding
 
 - Java Pojo类生成前端TypeScript Vo类
 
+**TODO**
+
+[ ] 根据Vo类创建前端表单页面
+
 ## Usage
 
 - npm install
 
-- 将编译后的Java `.class`文件放到`java-class`文件夹中
-
-eg:
-
-执行`javac -encoding UTF-8 Test.java` 生成的 `Test.class` 文件放到`./java-class`目录下
-
-- 编辑`./java-class/file.json`文件，json的`fileNames`属性数组（数组的意思就是支持批量生成多个文件）
-
-```json
-{
-    "fileNames":[
-        "Test"
-    ]
-}
-```
+- 将Java POJO类文件放到`./java-class`文件夹中
 
 
 - 执行`npm run app`
 
-成功后再`dist`文件夹中即可找到对应的`*.vo.ts`文件
+成功后再`dist`文件夹中即可找到对应的`*.ts` VO 文件
 
 
 eg:
@@ -36,20 +26,68 @@ eg:
 **Test.ts**
 
 ```
-export class Test { 
+export class VResult { 
+	code : string;
+	message : string;
 	id : string;
-	billDepart : string;
-	operatDate : string;
-	shipperName : string;
-	shipperNo : string;
-	waybillId : string;
-	payType : string;
-	serviceType : string;
-	goods : string;
-	consignee : string;
-	consigneeAddress : string;
-	totalAmount : string;
-	feeDetail : string;
-	waybillStatus : string;
+}
+```
+
+**VResult.java**
+
+```java
+
+/**
+ * Created by Administrator on 2017-03-30.
+ */
+public class VResult {
+    /**
+     * 代码，默认成功1000
+     */
+    private int code = 1000;
+    /**
+     * 消息内容
+     */
+    private String message;
+    /**
+     * 键值
+     */
+    private String id;
+
+    public VResult(){
+    }
+
+    public VResult(String message){
+        this.message = message;
+    }
+
+    public VResult(String message, String id){
+        this.message = message;
+        this.id = id;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 }
 ```

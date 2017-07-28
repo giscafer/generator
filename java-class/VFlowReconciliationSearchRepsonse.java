@@ -1,7 +1,5 @@
 
 
-import java.math.BigDecimal;
-
 /**
  * Created by hjd on 2017-07-20.
  * 月结对账查询响应VO
@@ -58,7 +56,7 @@ public class VFlowReconciliationSearchRepsonse {
     /**
      * 总金额
      */
-    private BigDecimal totalAmount;
+    private Object totalAmount;
 //    /**
 //     * 费用明细
 //     * */
@@ -160,11 +158,11 @@ public class VFlowReconciliationSearchRepsonse {
         this.consigneeAddress = consigneeAddress;
     }
 
-    public BigDecimal getTotalAmount() {
+    public Object getTotalAmount() {
         return totalAmount;
     }
 
-    public void setTotalAmount(BigDecimal totalAmount) {
+    public void setTotalAmount(Object totalAmount) {
         this.totalAmount = totalAmount;
     }
 
