@@ -11,14 +11,14 @@ auto coding
 
 ## Usage
 
-- npm install
+- （1）npm install
 
-- 将Java POJO类文件放到`./java-class`文件夹中
+- （2）将Java POJO类文件放到`./java-class`文件夹中
 
 
-- 执行`npm run app`
+- （3）执行`npm run app`
 
-成功后再`dist`文件夹中即可找到对应的`*.ts` VO 文件
+执行成功后在`./dist`文件夹中即可找到生成的`*.ts` VO 文件
 
 
 eg:
