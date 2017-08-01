@@ -8,20 +8,19 @@ let cmd = require('node-cmd');
 let generator = require('./builder/generator');
 let javaFileReader = require('./builder/java-file-reader');
 
-let fileNames = require('./builder/data.js').split('|');
-let javaFilePaths = require('./FilesList');
-console.log(javaFilePaths);
 let tool = java.newInstanceSync("Tool");
 
 let instances = [];
 
 function g() {
+
+    let fileNames = require('./builder/data.js').split('|');
+    let javaFilePaths = require('./FilesList');
     console.log('开始执行……')
     for (let p of javaFilePaths) {
-        p=p.replace(/\/\//g,'/');
-        console.log('javac -encoding UTF-8  ' + p)
-
+        p = p.replace(/\/\//g, '/');
         cmd.run('javac -encoding UTF-8  ' + p);
+        console.log('javac -encoding UTF-8  ' + p)
     }
     // 
     console.log('Java文件编译完成')

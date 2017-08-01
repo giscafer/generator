@@ -1,1 +1,1 @@
-module.exports="VCollectionSearchRequest"
+module.exports="VArrears|VConsignerBalance|VCustomer|VEditCustomer|VListCustomer|VorderAmount"

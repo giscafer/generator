@@ -39,7 +39,8 @@ function generateVo(fields, fileName, cb) {
 }
 
 function buildVoContent(fields, fileName) {
-    var str = 'export class ' + fileName + ' { \n';
+    var str = '/*tslint:disable*/ \n';
+    str += 'export class ' + fileName + ' { \n';
     for (let f of fields) {
         str += '\t' + f + ' :' + ' string;\n';
     }

@@ -1,1 +1,1 @@
-module.exports=["F://test//generator//java-class//VCollectionSearchRequest.java"]
+module.exports=["F://test//generator//java-class//VArrears.java","F://test//generator//java-class//VConsignerBalance.java","F://test//generator//java-class//VCustomer.java","F://test//generator//java-class//VEditCustomer.java","F://test//generator//java-class//VListCustomer.java","F://test//generator//java-class//VorderAmount.java"]

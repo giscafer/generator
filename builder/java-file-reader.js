@@ -45,12 +45,12 @@ function read(cb) {
                 filePaths.push(path);
             }
         }
-        console.log('覆写Java类完成！');
         let fileNameStr = 'module.exports="' + fileNames.join('|') + '"';
         fs.writeFileSync(DATA_PATH, fileNameStr);
         fs.writeFileSync(FILE_LIST_PATH, filePaths.join('|'));
         let filesStr = 'module.exports=["' + filePaths.join('","') + '"]';
         fs.writeFileSync(FILE_LIST_JS_PATH, filesStr);
+        console.log('覆写Java类完成！');
         cb();
     });
 }
